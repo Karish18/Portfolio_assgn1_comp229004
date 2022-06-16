@@ -1,0 +1,40 @@
+<% include partials/header.ejs %>
+ 
+<body style="background-color: rgb(28, 158, 178);">
+  
+  
+  <div class="container p-3 my-3 border" style="box-shadow: 1px 1px 8px 4px">
+    <h3> <Welcome></h3>
+      <h3><p><b><center>Welcome to <%= title %>!</center></b></h3></p>
+    <form>
+
+      <label for="fname">Name:<input type="text" id="fname" name="fname" placeholder="Your name.." required="required" /></label>
+      <p id="userfirstnameError" class="errorMsg"></p> </br>
+     
+      <label for="contact">Phone:<input type="text" id="number" name="number" placeholder="Your phone number.." required="required" /></label>
+      <p id="cityError" class="errorMsg"></p> </br>
+      
+      <label for="Email">Email:<input type="text" id="email" name="email" placeholder="Your e-mail.." required="required" /></label>
+      <p id="emailError" class="errorMsg"></p> </br>
+      <label for="connect">Message:</label>
+      <textarea id="connect" name="connect" placeholder="Message / Comments.." style="height:50px"></textarea>
+      <a href="/"><input type="button" id="submit" value="Submit" /></a>
+  </form>
+
+
+   
+
+    
+
+
+    
+  </br>
+    <a href="/" class="btn btn-primary">Home!</a>
+    <a href="/about" class="btn btn-primary">About me!</a>
+    <a href="/projects" class="btn btn-primary">Projects!</a>
+    <a href="/services" class="btn btn-primary">Services!</a>
+    <a href="/contact" class="btn btn-primary">Contact!</a>
+  </div>
+</div>
+<hr>
+<% include partials/footer.ejs %></body>

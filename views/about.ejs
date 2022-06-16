@@ -1,0 +1,39 @@
+<% include partials/header.ejs %>
+<style>
+.mt-4 {
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  right: 20%;
+  
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); 
+}
+</style>
+<body style="background-color: rgb(229, 229, 103);">
+  
+  <div class="container p-3 my-3 border" style="box-shadow: 1px 1px 5px 3px">
+    <h3> <Welcome></h3>
+    <h3><p><b><center>Welcome to <%= title %>!</center></b></h3></p>
+
+    <div class="box border"><p><img src="/images/karish.jpg" width="350px" height="500px"><p style="font-family:courier;"><p align="right"> Hie Everyone, I am Karishma Bagthariya (301235852) student of Centennial College. </br> 
+    I'm currently studying Software Engineering Technician (Fast-Track) Program.</p>
+    <div class="mt-4">
+      <p class="h4 text-black" align="right">Click below to download resume.</p>
+       
+            <button type="button" onclick= "alert('No resume')" align="right" class="btn text-dark btn-lg bg-blue">Download PDF <i class="fa fa-download" download></i></button> 
+       
+  </div>
+
+  <br>
+    
+  
+    <a href="/" class="btn btn-primary">Home!</a>
+    <a href="/about" class="btn btn-primary">About me!</a>
+    <a href="/projects" class="btn btn-primary">Projects!</a>
+    <a href="/services" class="btn btn-primary">Services!</a>
+    <a href="/contact" class="btn btn-primary">Contact!</a>
+  </div>
+</div>
+<hr>
+<% include partials/footer.ejs %></body>
