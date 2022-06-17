@@ -5,8 +5,10 @@ let user_dbController = require('../controllers/users_db');
 router.get('/list',user_dbController.userList);
 
 
-// edit routers
+// display edit page
 router.get('/edit/:id', user_dbController.displayEditPage);
+
+//process the edit request
 router.post('/edit/:id', user_dbController.processEditPage);
 
 // Display the Add page 
