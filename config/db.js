@@ -11,10 +11,10 @@ let mongoose = require('mongoose');
 module.exports= function(){
 
     mongoose.connect(atlasDB);
-    let mongoDB = mongoose.connection;
-    mongoDB.on('error',console.error.bind(console,'Connection Error :'));
-    mongoDB.once('open', ()=>{
+    let mDB = mongoose.connection;
+    mDB.on('error',console.error.bind(console,'Connection Error :'));
+    mDB.once('open', ()=>{
         console.log('Connected to MongoDB....');
     });
-    return mongoDB;
+    return mDB;
 }
