@@ -1,0 +1,50 @@
+<%- include ../partials/header.ejs %>
+
+    <!-- User list -->
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="row">
+        <h1><%= title %></h1>
+        <br>
+        <div>
+            <a href="/users_db/add" class="btn btn-primary align-self-end" role="button">
+                <i class="fa-solid fa-user-plus"></i>
+                Add a new User
+            </a>                
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row-->
+                <tr>
+                    <th class="text-center">Email_id</th>
+                    <th class="text-center">User name</th>
+                    <th class="text-center">Contact</th>
+                    <th class="text-center" colspan="2">Actions</th>
+                    
+                </tr>
+
+                <!-- Repeatable Template Row -->
+
+                <% for(let count = 0; count < UserList.length; count++) { %>
+                    <tr>
+                        <td class="text-center"><%= UserList[count].email_id %></td>
+                        <td class="text-center"><%= UserList[count].user_name %></td>
+                        <td class="text-center"><%= UserList[count].contact %></td>
+                        </td>
+                        <td class="text-center">
+                            <a href="/users_db/edit/<%= UserList[count]._id %>" class="btn btn-primary btn-sm">
+                            <i class="fas fa-pencil-alt"></i></a>
+                        </td>
+                        <td class="text-center">
+                            <a href="/users_db/delete/<%= UserList[count]._id %>" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+  </main>
+<%- include ../partials/footer.ejs %>
