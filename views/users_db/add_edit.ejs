@@ -12,12 +12,12 @@
                         name="id"
                         value="<%= user._id %>"
                     >
-                    <label for="emailidTextField">Email_id</label>
-                    <input type="text" class="form-control"
-                        id="emailTextField"
+                    <label for="email">Email_id</label>
+                    <input type="email" class="form-control"
+                        id="email"
                         placeholder="Enter the User Email address"
                         name="email_id" 
-                        value="<%= users.Email_id %>"
+                        value="<%= user.Email %>"
                         required>
                 </div>
                 <br />
@@ -27,7 +27,7 @@
                     id="usernameTextField"
                     placeholder="Enter user name"
                     name="username" 
-                    value="<%= users.user_name %>"
+                    value="<%= user.user_name %>"
                     required>
                 </div>
                 <br />
@@ -37,15 +37,16 @@
                     id="contactTextField"
                     placeholder="Enter user's contact number"
                     name="contact" 
-                    value="<%= users.contact %>" required>
-                    >
+                    value="<%= user.contact %>" required>
+                    
                     </div>                    
                 </div>                
                 <br />
                 
                 <button class="btn btn-primary" type="submit">
                     <i class="fa-solid fa-user-pen"></i> 
-                    Submit
+                    <div>
+                    Submit</div>
                 </button>
                 
                 <a href="/users_db/list" class="btn btn-warning">

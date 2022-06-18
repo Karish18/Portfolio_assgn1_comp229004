@@ -43,10 +43,10 @@ module.exports.processEditPage = (req, res, next) => {
 
     let updatedUser = userModel({
         _id: req.body.id,
-        email_id: req.body.email_id,
+        email_id: req.body.email,
         user_name: req.body.username,
         contact: req.body.contact,
-        tags: req.body.tags.split(",").map(word => word.trim())
+        //tags: req.body.tags.split(",").map(word => word.trim())
     });
 
 
@@ -77,10 +77,10 @@ module.exports.processAddPage = (req, res, next) => {
 
     let newUser = userModel({
         _id: req.body.id,
-        email_id: req.body.email_id,
+        email_id: req.body.email,
         user_name: req.body.username,
         contact: req.body.contact,
-        tags: req.body.tags.split(",").map(word => word.trim())
+       // tags: req.body.tags.split(",").map(word => word.trim())
     });
 
     userModel.create(newUser, (err, user) =>{

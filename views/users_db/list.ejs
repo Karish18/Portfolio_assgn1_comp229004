@@ -9,7 +9,7 @@
         <br>
         <div>
             <a href="/users_db/add" class="btn btn-primary align-self-end" role="button">
-                <i class="fa-solid fa-user-plus"></i>
+                <i class="fa fa-user-plus"></i>
                 Add a new User
             </a>                
         </div>
@@ -34,11 +34,11 @@
                         <td class="text-center"><%= UserList[count].contact %></td>
                         </td>
                         <td class="text-center">
-                            <a href="./users_db/edit/<%= UserList[count]._id %>" class="btn btn-primary btn-sm">
+                            <a href="/users_db/edit/<%= UserList[count]._id %>" class="btn btn-primary btn-sm">
                             <i class="fas fa-pencil-alt"></i></a>
                         </td>
                         <td class="text-center">
-                            <a href="./users_db/delete/<%= UserList[count]._id %>" class="btn btn-danger btn-sm">
+                            <a href="/users_db/delete/<%= UserList[count]._id %>" class="btn btn-danger btn-sm">
                             <i class="fas fa-trash-alt"></i></a>
                         </td>
                     </tr>
