@@ -7,16 +7,16 @@ router.get('/', userController.user);
 router.get('/karish', userController.karish);
 
 //signup
-router.get('/signup', userController.renderSingup);
+router.get('/signup' , userController.renderSignup);
 router.post('/signup', userController.signup);
 
 
 //signin
-router.get('/signin' , userController.renderSignin);
-router.post('/signin' , userController.signin);
+//router.get('/signin' , userController.renderSignin);
+//router.post('/signin' , userController.signin);
 
 
-router.get('/signout' , userController.signout);
+//router.get('/signout' , userController.signout);
 
 /* GET users listing.
 router.get('/', function(req, res, next) {

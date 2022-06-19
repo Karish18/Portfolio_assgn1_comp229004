@@ -3,7 +3,9 @@ let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
-
+//let compress = require('compression');
+//let bodyParser = require('body-Parser');
+//let methodOverride = require('method-override');
 let session = require('express-session');
 let flash = require('connect-flash');
 let passport = require('passport');

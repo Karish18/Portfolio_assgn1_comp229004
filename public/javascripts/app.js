@@ -1,3 +1,5 @@
+console.log('Goes to the client side');
+
 const { event } = require("jquery");
 
 console.log('app script is working.');
