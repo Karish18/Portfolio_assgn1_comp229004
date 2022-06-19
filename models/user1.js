@@ -22,8 +22,8 @@ let user_Model = mongoose.Schema(
     },
     password : {
         type : String,
-        validate : [(password) =>{return password && pasword.length>6;},
-        "Incorrect password. Please enter password with length more than 6 letters and "]
+        validate : [(password) =>{return password && password.length>6;},
+        "Incorrect password. Please enter password with length more than 6 letters "]
     },
     created:{
         type : Date,

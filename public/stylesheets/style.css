@@ -1,8 +1,19 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+html
+{
+  position : relative;
+  min-height : 100%;
 }
 
-a {
-  color: #00B7FF;
+body
+{
+  margin-bottom : 60px;
+  bottom :0;
+  width : 100%;
+  height : 60px;
+  background-color :palegreen;
+}
+
+.flash
+{
+  color :darkred;
 }
