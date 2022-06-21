@@ -26,8 +26,8 @@ router.get('/services', function(req, res, next) {
 });
 
 /* GET Contact page. */
-router.get('/contact', function(req, res, next) {
-  res.render('contact', { title: 'Contact' });
+router.get('/contact_me', function(req, res, next) {
+  res.render('contact_me', { title: 'Contact_me' });
 });
 
 
