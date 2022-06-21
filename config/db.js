@@ -1,5 +1,5 @@
 //user-karishma
-// password-Karishma@18
+// password-SgLMZUYqOGoTbOIC
 //connection string -mongodb+srv://Karishma:<password>@cluster229-004.hymr9.mongodb.net/test
 
 //establishing the connection

@@ -1,4 +1,4 @@
-let user = require('../models/user1');
+let userModel = require('../models/user1');
 let passport = require('passport');
 
 exports.user = function(req, res, next)
@@ -40,7 +40,7 @@ function getErrorMessage(err){
 module.exports.renderSignup = function(req, res, next){
   if(!req.user){
     //create a new user
-    let newUser = user();
+    let newUser = userModel();
     res.render('auth/signup',{
       title: 'Sign-up Form',
       messages : req.flash('error'),
@@ -56,7 +56,7 @@ module.exports.signup = function(req, res, next){
   if(!req.user){
     console.log(req.body);
 
-    let user = new user(req.body);
+    let user = new userModel(req.body);
     console.log(user);
 
     user.save((err)=>{
@@ -79,3 +79,34 @@ module.exports.signup = function(req, res, next){
     return res.redirect('/');
   }
 };
+
+//signin methods
+
+module.exports.renderSignin = function(req, res, next){
+  if(!req.user){
+    res.render('auth/signin', {
+      title : 'Sign-in Form', 
+      messages : req.flash('error') || req.flash('info')
+      });
+    } else{
+      //console.log(req.user);
+      return res.redirect('/');
+    }
+  };
+
+  
+  module.exports.signin = function(req, res, next){
+    passport.authenticate('local', {   
+      successRedirect: req.session.url || '/',
+      failureRedirect: '/users/signin',
+      failureFlash: true
+    })(req, res, next);
+    delete req.session.url;
+  }
+
+
+  module.exports.signout = function(req, res, next){
+    req.logout();
+    res.redirect('/');
+  };
+  

@@ -16,11 +16,12 @@ function authLocal(user_name, password, done){
         }
         if(!user)
         {
-            return done(null , false , {message:'Invalid User'});
+            return done(null , false , 
+                { message:'Invalid User'});
         }
         if(!user.authenticate(password))
         {
-            return done(null , fasle , {message:'Invalid password'});
+            return done(null , false , {message:'Invalid password'});
         }
 
         return done(null , user);

@@ -12,11 +12,11 @@ router.post('/signup', userController.signup);
 
 
 //signin
-//router.get('/signin' , userController.renderSignin);
-//router.post('/signin' , userController.signin);
+router.get('/signin' , userController.renderSignin);
+router.post('/signin' , userController.signin);
 
 
-//router.get('/signout' , userController.signout);
+router.get('/signout' , userController.signout);
 
 /* GET users listing.
 router.get('/', function(req, res, next) {
