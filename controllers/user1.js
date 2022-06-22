@@ -83,13 +83,13 @@ module.exports.signup = function(req, res, next){
 //signin methods
 
 module.exports.renderSignin = function(req, res, next){
-  if(!req.user){
+  if(!req.user) {
     res.render('auth/signin', {
-      title : 'Sign-in Form', 
-      messages : req.flash('error') || req.flash('info')
+      title: 'Sign-in Form', 
+      messages: req.flash('error') || req.flash('info')
       });
-    } else{
-      //console.log(req.user);
+    } else {
+      console.log(req.user);
       return res.redirect('/');
     }
   };

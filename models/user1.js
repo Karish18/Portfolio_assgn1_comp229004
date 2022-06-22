@@ -1,5 +1,6 @@
 let mongoose = require('mongoose');
 let crypto = require('crypto');
+let Schema = mongoose.Schema;
 
 //model class
 let user_Model = mongoose.Schema(
